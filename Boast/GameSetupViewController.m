@@ -8,6 +8,7 @@
 
 #import <GoogleCast.h>
 #import "GameSetupViewController.h"
+#import "GameData.h"
 
 @interface GameSetupViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *pointsLabel;
@@ -15,7 +16,6 @@
 @property (strong, nonatomic) NSMutableArray *devices;
 @property (weak, nonatomic) IBOutlet UITableView *devicesTableView;
 @property (weak, nonatomic) IBOutlet UIStepper *stepper;
-@property (strong, nonatomic) GCKDevice *selectedDevice;
 @property (weak, nonatomic) IBOutlet UIButton *gameOnButton;
 
 @end
@@ -82,7 +82,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.selectedDevice = self.devices[indexPath.row];
+    GameData *gameData = [GameData sharedGameData];
+    gameData.device = self.devices[indexPath.row];
     self.gameOnButton.enabled = YES;
 }
 
