@@ -23,6 +23,8 @@
 		884501D61A17F9480076ECF6 /* PlayerBoastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501D51A17F9480076ECF6 /* PlayerBoastViewController.m */; };
 		884501D81A17FD680076ECF6 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 884501D71A17FD680076ECF6 /* avatar.jpg */; };
 		884501DB1A17FDE40076ECF6 /* PlayerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501DA1A17FDE40076ECF6 /* PlayerCollectionViewCell.m */; };
+		884501DE1A18005F0076ECF6 /* ChromeCastManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501DD1A18005F0076ECF6 /* ChromeCastManager.m */; };
+		884501E11A1807D30076ECF6 /* BoastChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501E01A1807D30076ECF6 /* BoastChannel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,10 @@
 		884501D71A17FD680076ECF6 /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
 		884501D91A17FDE40076ECF6 /* PlayerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerCollectionViewCell.h; sourceTree = "<group>"; };
 		884501DA1A17FDE40076ECF6 /* PlayerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerCollectionViewCell.m; sourceTree = "<group>"; };
+		884501DC1A18005F0076ECF6 /* ChromeCastManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChromeCastManager.h; sourceTree = "<group>"; };
+		884501DD1A18005F0076ECF6 /* ChromeCastManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChromeCastManager.m; sourceTree = "<group>"; };
+		884501DF1A1807D30076ECF6 /* BoastChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoastChannel.h; sourceTree = "<group>"; };
+		884501E01A1807D30076ECF6 /* BoastChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BoastChannel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +136,10 @@
 				884501CB1A17EE4B0076ECF6 /* GameData.m */,
 				884501CD1A17EF870076ECF6 /* Player.h */,
 				884501CE1A17EF870076ECF6 /* Player.m */,
+				884501DC1A18005F0076ECF6 /* ChromeCastManager.h */,
+				884501DD1A18005F0076ECF6 /* ChromeCastManager.m */,
+				884501DF1A1807D30076ECF6 /* BoastChannel.h */,
+				884501E01A1807D30076ECF6 /* BoastChannel.m */,
 			);
 			path = Boast;
 			sourceTree = "<group>";
@@ -318,11 +328,13 @@
 				884501D21A17F1410076ECF6 /* AddPlayerViewController.m in Sources */,
 				884501DB1A17FDE40076ECF6 /* PlayerCollectionViewCell.m in Sources */,
 				884501CC1A17EE4B0076ECF6 /* GameData.m in Sources */,
+				884501DE1A18005F0076ECF6 /* ChromeCastManager.m in Sources */,
 				884501D61A17F9480076ECF6 /* PlayerBoastViewController.m in Sources */,
 				884501C41A17E1B00076ECF6 /* GameSetupViewController.m in Sources */,
 				8845019F1A17E09B0076ECF6 /* main.m in Sources */,
 				884501CF1A17EF870076ECF6 /* Player.m in Sources */,
 				884501C71A17E2BD0076ECF6 /* SplashViewController.m in Sources */,
+				884501E11A1807D30076ECF6 /* BoastChannel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

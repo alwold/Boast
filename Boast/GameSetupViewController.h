@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GameSetupViewController : UIViewController <GCKDeviceScannerListener, UITableViewDelegate, UITableViewDataSource>
+@interface GameSetupViewController : UIViewController <GCKDeviceScannerListener, UITableViewDelegate, UITableViewDataSource, GCKDeviceManagerDelegate>
 
 @end

@@ -91,17 +91,21 @@
                                 </state>
                                 <connections>
                                     <action selector="gameOnPressed:" destination="QmY-rh-XHZ" eventType="touchUpInside" id="8dW-WJ-n3g"/>
-                                    <segue destination="wly-UQ-UQ9" kind="show" id="bgZ-jX-Di5"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="7qT-IE-AUI">
+                                <rect key="frame" x="530" y="495" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="7qT-IE-AUI" id="iQx-K0-uWV"/>
                         <outlet property="devicesTableView" destination="LLU-Rg-tg1" id="rLc-1c-axw"/>
                         <outlet property="gameOnButton" destination="XAe-lX-BaO" id="qvx-z9-2ay"/>
                         <outlet property="pointsLabel" destination="pev-eq-nMM" id="z4c-dZ-BZV"/>
                         <outlet property="stepper" destination="h4O-In-rtY" id="MHS-xM-NCt"/>
+                        <segue destination="wly-UQ-UQ9" kind="show" id="hwR-K3-D5S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Pf-t0-zUc" userLabel="First Responder" sceneMemberID="firstResponder"/>

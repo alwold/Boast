@@ -9,6 +9,7 @@
 #import <GoogleCast.h>
 #import "GameSetupViewController.h"
 #import "GameData.h"
+#import "ChromeCastManager.h"
 
 @interface GameSetupViewController ()
 @property (strong, nonatomic) IBOutlet UILabel *pointsLabel;
@@ -17,6 +18,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *devicesTableView;
 @property (weak, nonatomic) IBOutlet UIStepper *stepper;
 @property (weak, nonatomic) IBOutlet UIButton *gameOnButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicatorView;
 
 @end
 
@@ -88,5 +90,29 @@
 }
 
 - (IBAction)gameOnPressed:(id)sender {
+    self.activityIndicatorView.hidden = NO;
+    
+    GameData *gameData = [GameData sharedGameData];
+    ChromeCastManager *manager = [ChromeCastManager shared];
+    manager.deviceManager = [[GCKDeviceManager alloc] initWithDevice:gameData.device
+                                                   clientPackageName:[[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleIdentifier"]];
+    manager.deviceManager.delegate = self;
+    [manager.deviceManager connect];
+}
+
+- (void)deviceManagerDidConnect:(GCKDeviceManager *)deviceManager
+{
+    NSLog(@"connected");
+    [deviceManager launchApplication:@"083889FB"];
+}
+
+- (void)deviceManager:(GCKDeviceManager *)deviceManager didConnectToCastApplication:(GCKApplicationMetadata *)applicationMetadata sessionID:(NSString *)sessionID launchedApplication:(BOOL)launchedApplication
+{
+    NSLog(@"connected to application");
+
+    ChromeCastManager *manager = [ChromeCastManager shared];
+    manager.channel = [[BoastChannel alloc] initWithNamespace:@"urn:x-cast:com.google.cast.funcast.boast"];
+
+    [deviceManager addChannel:manager.channel];
 }
 @end
