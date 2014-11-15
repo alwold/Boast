@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  SplashViewController.h
 //  Boast
 //
 //  Created by Al Wold on 11/15/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface SplashViewController : UIViewController
 
 @end
-

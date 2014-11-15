@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		8845019F1A17E09B0076ECF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8845019E1A17E09B0076ECF6 /* main.m */; };
 		884501A21A17E09B0076ECF6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501A11A17E09B0076ECF6 /* AppDelegate.m */; };
-		884501A51A17E09B0076ECF6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501A41A17E09B0076ECF6 /* ViewController.m */; };
 		884501A81A17E09B0076ECF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 884501A61A17E09B0076ECF6 /* Main.storyboard */; };
 		884501AA1A17E09B0076ECF6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 884501A91A17E09B0076ECF6 /* Images.xcassets */; };
 		884501AD1A17E09B0076ECF6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 884501AB1A17E09B0076ECF6 /* LaunchScreen.xib */; };
 		884501B91A17E09B0076ECF6 /* BoastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501B81A17E09B0076ECF6 /* BoastTests.m */; };
+		884501C41A17E1B00076ECF6 /* GameSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501C31A17E1B00076ECF6 /* GameSetupViewController.m */; };
+		884501C71A17E2BD0076ECF6 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501C61A17E2BD0076ECF6 /* SplashViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +33,16 @@
 		8845019E1A17E09B0076ECF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		884501A01A17E09B0076ECF6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		884501A11A17E09B0076ECF6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		884501A31A17E09B0076ECF6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		884501A41A17E09B0076ECF6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		884501A71A17E09B0076ECF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		884501A91A17E09B0076ECF6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		884501AC1A17E09B0076ECF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		884501B21A17E09B0076ECF6 /* BoastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		884501B71A17E09B0076ECF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		884501B81A17E09B0076ECF6 /* BoastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoastTests.m; sourceTree = "<group>"; };
+		884501C21A17E1B00076ECF6 /* GameSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSetupViewController.h; sourceTree = "<group>"; };
+		884501C31A17E1B00076ECF6 /* GameSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSetupViewController.m; sourceTree = "<group>"; };
+		884501C51A17E2BD0076ECF6 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		884501C61A17E2BD0076ECF6 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +86,14 @@
 			children = (
 				884501A01A17E09B0076ECF6 /* AppDelegate.h */,
 				884501A11A17E09B0076ECF6 /* AppDelegate.m */,
-				884501A31A17E09B0076ECF6 /* ViewController.h */,
-				884501A41A17E09B0076ECF6 /* ViewController.m */,
 				884501A61A17E09B0076ECF6 /* Main.storyboard */,
 				884501A91A17E09B0076ECF6 /* Images.xcassets */,
 				884501AB1A17E09B0076ECF6 /* LaunchScreen.xib */,
 				8845019C1A17E09B0076ECF6 /* Supporting Files */,
+				884501C21A17E1B00076ECF6 /* GameSetupViewController.h */,
+				884501C31A17E1B00076ECF6 /* GameSetupViewController.m */,
+				884501C51A17E2BD0076ECF6 /* SplashViewController.h */,
+				884501C61A17E2BD0076ECF6 /* SplashViewController.m */,
 			);
 			path = Boast;
 			sourceTree = "<group>";
@@ -219,9 +224,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				884501A51A17E09B0076ECF6 /* ViewController.m in Sources */,
 				884501A21A17E09B0076ECF6 /* AppDelegate.m in Sources */,
+				884501C41A17E1B00076ECF6 /* GameSetupViewController.m in Sources */,
 				8845019F1A17E09B0076ECF6 /* main.m in Sources */,
+				884501C71A17E2BD0076ECF6 /* SplashViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
