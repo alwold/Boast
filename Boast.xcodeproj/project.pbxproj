@@ -20,6 +20,9 @@
 		884501CC1A17EE4B0076ECF6 /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501CB1A17EE4B0076ECF6 /* GameData.m */; };
 		884501CF1A17EF870076ECF6 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501CE1A17EF870076ECF6 /* Player.m */; };
 		884501D21A17F1410076ECF6 /* AddPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501D11A17F1410076ECF6 /* AddPlayerViewController.m */; };
+		884501D61A17F9480076ECF6 /* PlayerBoastViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501D51A17F9480076ECF6 /* PlayerBoastViewController.m */; };
+		884501D81A17FD680076ECF6 /* avatar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 884501D71A17FD680076ECF6 /* avatar.jpg */; };
+		884501DB1A17FDE40076ECF6 /* PlayerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501DA1A17FDE40076ECF6 /* PlayerCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,11 @@
 		884501CE1A17EF870076ECF6 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		884501D01A17F1410076ECF6 /* AddPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddPlayerViewController.h; sourceTree = "<group>"; };
 		884501D11A17F1410076ECF6 /* AddPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddPlayerViewController.m; sourceTree = "<group>"; };
+		884501D41A17F9480076ECF6 /* PlayerBoastViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerBoastViewController.h; sourceTree = "<group>"; };
+		884501D51A17F9480076ECF6 /* PlayerBoastViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerBoastViewController.m; sourceTree = "<group>"; };
+		884501D71A17FD680076ECF6 /* avatar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar.jpg; sourceTree = "<group>"; };
+		884501D91A17FDE40076ECF6 /* PlayerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerCollectionViewCell.h; sourceTree = "<group>"; };
+		884501DA1A17FDE40076ECF6 /* PlayerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,7 @@
 		8845019B1A17E09B0076ECF6 /* Boast */ = {
 			isa = PBXGroup;
 			children = (
+				884501D71A17FD680076ECF6 /* avatar.jpg */,
 				884501D31A17F1490076ECF6 /* UI */,
 				884501A01A17E09B0076ECF6 /* AppDelegate.h */,
 				884501A11A17E09B0076ECF6 /* AppDelegate.m */,
@@ -160,6 +169,10 @@
 				884501C31A17E1B00076ECF6 /* GameSetupViewController.m */,
 				884501C51A17E2BD0076ECF6 /* SplashViewController.h */,
 				884501C61A17E2BD0076ECF6 /* SplashViewController.m */,
+				884501D41A17F9480076ECF6 /* PlayerBoastViewController.h */,
+				884501D51A17F9480076ECF6 /* PlayerBoastViewController.m */,
+				884501D91A17FDE40076ECF6 /* PlayerCollectionViewCell.h */,
+				884501DA1A17FDE40076ECF6 /* PlayerCollectionViewCell.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -247,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				884501A81A17E09B0076ECF6 /* Main.storyboard in Resources */,
+				884501D81A17FD680076ECF6 /* avatar.jpg in Resources */,
 				884501AD1A17E09B0076ECF6 /* LaunchScreen.xib in Resources */,
 				884501C91A17E5330076ECF6 /* Podfile in Resources */,
 				884501AA1A17E09B0076ECF6 /* Images.xcassets in Resources */,
@@ -302,7 +316,9 @@
 			files = (
 				884501A21A17E09B0076ECF6 /* AppDelegate.m in Sources */,
 				884501D21A17F1410076ECF6 /* AddPlayerViewController.m in Sources */,
+				884501DB1A17FDE40076ECF6 /* PlayerCollectionViewCell.m in Sources */,
 				884501CC1A17EE4B0076ECF6 /* GameData.m in Sources */,
+				884501D61A17F9480076ECF6 /* PlayerBoastViewController.m in Sources */,
 				884501C41A17E1B00076ECF6 /* GameSetupViewController.m in Sources */,
 				8845019F1A17E09B0076ECF6 /* main.m in Sources */,
 				884501CF1A17EF870076ECF6 /* Player.m in Sources */,
