@@ -60,18 +60,7 @@
 - (void)setNextColor {
     GameData *gameData = [GameData sharedGameData];
     self.color = [gameData getNextColor];
-    switch (self.color) {
-        case COLOR_RED:
-            self.colorView.backgroundColor = [UIColor redColor];
-            break;
-        case COLOR_ORANGE:
-            self.colorView.backgroundColor = [UIColor orangeColor];
-            break;
-        case COLOR_YELLOW:
-            self.colorView.backgroundColor = [UIColor yellowColor];
-            break;
-            // TODO finish these
-    }
+    self.colorView.backgroundColor = [GameData uiColorForColor:self.color];
 }
 
 - (IBAction)startButtonPressed:(id)sender {

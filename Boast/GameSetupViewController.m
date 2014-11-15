@@ -114,5 +114,6 @@
     manager.channel = [[BoastChannel alloc] initWithNamespace:@"urn:x-cast:com.google.cast.funcast.boast"];
 
     [deviceManager addChannel:manager.channel];
+    [self performSegueWithIdentifier:@"showAddPlayer" sender:self];
 }
 @end

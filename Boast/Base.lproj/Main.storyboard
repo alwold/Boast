@@ -105,7 +105,7 @@
                         <outlet property="gameOnButton" destination="XAe-lX-BaO" id="qvx-z9-2ay"/>
                         <outlet property="pointsLabel" destination="pev-eq-nMM" id="z4c-dZ-BZV"/>
                         <outlet property="stepper" destination="h4O-In-rtY" id="MHS-xM-NCt"/>
-                        <segue destination="wly-UQ-UQ9" kind="show" id="hwR-K3-D5S"/>
+                        <segue destination="wly-UQ-UQ9" kind="show" identifier="showAddPlayer" id="hwR-K3-D5S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Pf-t0-zUc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -202,7 +202,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="148" height="158"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KmB-JA-KwK">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KmB-JA-KwK" customClass="TintedImageView">
                                                     <rect key="frame" x="24" y="29" width="100" height="100"/>
                                                 </imageView>
                                             </subviews>

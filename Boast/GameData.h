@@ -27,6 +27,8 @@
 
 + (id)sharedGameData;
 
++ (UIColor *)uiColorForColor:(int)color;
+
 - (int)getNextColor;
 
 @end

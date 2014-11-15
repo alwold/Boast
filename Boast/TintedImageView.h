@@ -1,5 +1,5 @@
 //
-//  Player.m
+//  TintedImageView.h
 //  Boast
 //
 //  Created by Al Wold on 11/15/14.
@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Player.h"
 
-@implementation Player
+@interface TintedImageView : UIImageView
+
+@property (strong, nonatomic) UIColor *customTintColor;
 
 @end

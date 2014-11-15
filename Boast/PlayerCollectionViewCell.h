@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TintedImageView.h"
 
 @interface PlayerCollectionViewCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet TintedImageView *imageView;
+
+- (void)setColor:(UIColor *)color;
 
 @end

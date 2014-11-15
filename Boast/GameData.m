@@ -19,6 +19,20 @@
     return _sharedGameData;
 }
 
++ (UIColor *)uiColorForColor:(int)color
+{
+    switch (color) {
+        case COLOR_RED:
+            return [UIColor redColor];
+        case COLOR_ORANGE:
+            return [UIColor orangeColor];
+        case COLOR_YELLOW:
+            return [UIColor yellowColor];
+            // TODO finish these
+    }
+    return nil;
+}
+
 - (id)init
 {
     self = [super init];

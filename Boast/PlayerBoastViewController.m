@@ -9,6 +9,7 @@
 #import "PlayerBoastViewController.h"
 #import "GameData.h"
 #import "PlayerCollectionViewCell.h"
+#import "Player.h"
 
 @interface PlayerBoastViewController ()
 
@@ -37,8 +38,13 @@
 {
     PlayerCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     NSLog(@"setting image");
+    GameData *gameData = [GameData sharedGameData];
+    Player *player = gameData.players[indexPath.row];
     cell.backgroundColor = [UIColor whiteColor];
     cell.imageView.image = [UIImage imageNamed:@"avatar.jpg"];
+    UIColor *color = [GameData uiColorForColor:player.color];
+    NSLog(@"setting color to %@", color);
+    cell.imageView.customTintColor = color;
     return cell;
 }
 

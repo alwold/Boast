@@ -10,4 +10,9 @@
 
 @implementation PlayerCollectionViewCell
 
+- (void)setColor:(UIColor *)color
+{
+    self.imageView.customTintColor = color;
+}
+
 @end
