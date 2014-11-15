@@ -23,20 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    GameData *gameData = [GameData sharedGameData];
-    self.color = [gameData getNextColor];
-    switch (self.color) {
-        case COLOR_RED:
-            self.colorView.backgroundColor = [UIColor redColor];
-            break;
-        case COLOR_ORANGE:
-            self.colorView.backgroundColor = [UIColor orangeColor];
-            break;
-        case COLOR_YELLOW:
-            self.colorView.backgroundColor = [UIColor yellowColor];
-            break;
-            // TODO finish these
-    }
+    [self setNextColor];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,6 +50,28 @@
     player.color = self.color;
     
     [gameData.players addObject:player];
+    
+    [[[UIAlertView alloc] initWithTitle:@"Added" message:@"Added" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+    
+    self.nameTextField.text = @"";
+    [self setNextColor];
+}
+
+- (void)setNextColor {
+    GameData *gameData = [GameData sharedGameData];
+    self.color = [gameData getNextColor];
+    switch (self.color) {
+        case COLOR_RED:
+            self.colorView.backgroundColor = [UIColor redColor];
+            break;
+        case COLOR_ORANGE:
+            self.colorView.backgroundColor = [UIColor orangeColor];
+            break;
+        case COLOR_YELLOW:
+            self.colorView.backgroundColor = [UIColor yellowColor];
+            break;
+            // TODO finish these
+    }
 }
 
 - (IBAction)startButtonPressed:(id)sender {
