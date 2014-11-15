@@ -107,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="1205" y="392"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Player View Controller-->
         <scene sceneID="Vjz-Pr-Thf">
             <objects>
-                <viewController id="wly-UQ-UQ9" sceneMemberID="viewController">
+                <viewController id="wly-UQ-UQ9" customClass="AddPlayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1Kq-EM-tsx"/>
                         <viewControllerLayoutGuide type="bottom" id="dhH-ml-UeE"/>
@@ -125,13 +125,42 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgy-4e-hLv">
+                                <rect key="frame" x="53" y="65" width="365" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9g-Q5-dGu">
+                                <rect key="frame" x="448" y="65" width="30" height="30"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="addPlayerPressed:" destination="wly-UQ-UQ9" eventType="touchUpInside" id="kd3-Yd-gax"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlH-cQ-tO6">
+                                <rect key="frame" x="254" y="413" width="33" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="wly-UQ-UQ9" eventType="touchUpInside" id="ire-qd-uM1"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4kG-pA-USp">
+                                <rect key="frame" x="16" y="70" width="20" height="20"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="colorView" destination="4kG-pA-USp" id="J4Z-8t-bsP"/>
+                        <outlet property="nameTextField" destination="sgy-4e-hLv" id="Oax-PN-fzL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DfH-Zw-3Uv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1867" y="392"/>
+            <point key="canvasLocation" x="1890" y="405"/>
         </scene>
     </scenes>
 </document>
