@@ -12,6 +12,7 @@
 @interface PlayerCollectionViewCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet TintedImageView *imageView;
+@property (weak, nonatomic) IBOutlet UILabel *label;
 
 - (void)setColor:(UIColor *)color;
 
