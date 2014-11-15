@@ -14,6 +14,9 @@
 @property (strong, nonatomic) GCKDeviceScanner *deviceScanner;
 @property (strong, nonatomic) NSMutableArray *devices;
 @property (weak, nonatomic) IBOutlet UITableView *devicesTableView;
+@property (weak, nonatomic) IBOutlet UIStepper *stepper;
+@property (strong, nonatomic) GCKDevice *selectedDevice;
+@property (weak, nonatomic) IBOutlet UIButton *gameOnButton;
 
 @end
 
@@ -22,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.devices = [NSMutableArray array];
-    self.pointsLabel.text = @"0";
+    self.pointsLabel.text = [NSString stringWithFormat:@"%d", (int) self.stepper.value];
     self.devicesTableView.delegate = self;
     self.devicesTableView.dataSource = self;
     // Do any additional setup after loading the view.
@@ -75,5 +78,14 @@
     cell.textLabel.text = device.friendlyName;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.selectedDevice = self.devices[indexPath.row];
+    self.gameOnButton.enabled = YES;
+}
+
+- (IBAction)gameOnPressed:(id)sender {
 }
 @end
