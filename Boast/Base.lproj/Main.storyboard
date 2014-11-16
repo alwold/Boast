@@ -214,19 +214,36 @@
                                             <rect key="frame" x="0.0" y="0.0" width="148" height="158"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0a-mo-Etv">
-                                                    <rect key="frame" x="8" y="119" width="132" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0a-mo-Etv">
+                                                    <rect key="frame" x="8" y="137" width="132" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KmB-JA-KwK" customClass="TintedImageView"/>
-                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="jail.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jh1-l5-uK7">
-                                                    <rect key="frame" x="0.0" y="0.0" width="148" height="158"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KmB-JA-KwK" customClass="TintedImageView">
+                                                    <rect key="frame" x="24" y="29" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="6xx-CB-YgC"/>
+                                                        <constraint firstAttribute="width" constant="100" id="zPa-qo-Tlx"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jail.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jh1-l5-uK7">
+                                                    <rect key="frame" x="8" y="8" width="132" height="142"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="i0a-mo-Etv" firstAttribute="top" secondItem="KmB-JA-KwK" secondAttribute="bottom" constant="8" symbolic="YES" id="9ff-l8-L6f"/>
+                                            <constraint firstItem="i0a-mo-Etv" firstAttribute="trailing" secondItem="h4A-2k-Cg9" secondAttribute="trailingMargin" id="PUN-rJ-Am3"/>
+                                            <constraint firstItem="i0a-mo-Etv" firstAttribute="leading" secondItem="h4A-2k-Cg9" secondAttribute="leadingMargin" id="U0w-HR-jgp"/>
+                                            <constraint firstAttribute="centerX" secondItem="KmB-JA-KwK" secondAttribute="centerX" id="YGt-lc-ixZ"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Jh1-l5-uK7" secondAttribute="bottom" id="be0-GM-zLf"/>
+                                            <constraint firstItem="Jh1-l5-uK7" firstAttribute="leading" secondItem="h4A-2k-Cg9" secondAttribute="leadingMargin" id="i3Y-FE-Ht6"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Jh1-l5-uK7" secondAttribute="trailing" id="kD0-NV-wZr"/>
+                                            <constraint firstAttribute="centerY" secondItem="KmB-JA-KwK" secondAttribute="centerY" id="kOq-Tb-McW"/>
+                                            <constraint firstItem="Jh1-l5-uK7" firstAttribute="top" secondItem="h4A-2k-Cg9" secondAttribute="topMargin" id="vnx-0h-IeR"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="KmB-JA-KwK" id="mty-0N-4SA"/>
                                             <outlet property="jailImageView" destination="Jh1-l5-uK7" id="Hww-Z2-Zuz"/>
