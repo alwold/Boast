@@ -25,7 +25,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.collectionView.dataSource = self;
+    self.collectionView.delegate = self;
     self.gameData = [GameData sharedGameData];
+    [self reset];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -49,4 +51,21 @@
     return cell;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    GameData *gameData = [GameData sharedGameData];
+    Player *player = gameData.players[indexPath.row];
+    NSLog(@"player: %@", player);
+    gameData.highBidder = player;
+    gameData.currentBid++;
+    NSLog(@"bid is now %d", gameData.currentBid);
+    [collectionView deselectItemAtIndexPath:indexPath animated:NO];
+}
+
+- (void)reset
+{
+    GameData *gameData = [GameData sharedGameData];
+    gameData.highBidder = nil;
+    gameData.currentBid = 0;
+}
 @end

@@ -17,6 +17,7 @@
 
 #import <Foundation/Foundation.h>
 #import <GoogleCast.h>
+#import "Player.h"
 
 @interface GameData : NSObject
 
@@ -24,6 +25,8 @@
 @property (nonatomic) int winPoints;
 @property (strong, nonatomic) NSMutableArray *players;
 @property (nonatomic) int nextColor;
+@property (nonatomic) int currentBid;
+@property (strong, nonatomic) Player *highBidder;
 
 + (id)sharedGameData;
 

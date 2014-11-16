@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PlayerBoastViewController : UIViewController <UICollectionViewDataSource>
+@interface PlayerBoastViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @end
