@@ -74,8 +74,9 @@
             cell.imageView.image = [UIImage imageNamed:@"avatar8.png"];
             break;
     }
-    cell.backgroundColor = color;
+    cell.imageHolderView.backgroundColor = color;
     cell.label.text = player.name;
+    cell.backgroundColor = collectionView.backgroundColor;
     if (player.skipRound) {
         cell.jailImageView.hidden = NO;
     } else {
