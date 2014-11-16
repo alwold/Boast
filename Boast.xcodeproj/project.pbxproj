@@ -31,6 +31,13 @@
 		884501EF1A1834AB0076ECF6 /* Challenge.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501EE1A1834AB0076ECF6 /* Challenge.m */; };
 		886106AB1A1910E50066D811 /* jail.png in Resources */ = {isa = PBXBuildFile; fileRef = 886106AA1A1910E50066D811 /* jail.png */; };
 		886106AD1A1914D50066D811 /* boast.png in Resources */ = {isa = PBXBuildFile; fileRef = 886106AC1A1914D50066D811 /* boast.png */; };
+		886106B01A1916E30066D811 /* GameOverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 886106AF1A1916E30066D811 /* GameOverViewController.m */; };
+		886106B71A1919800066D811 /* button_add.png in Resources */ = {isa = PBXBuildFile; fileRef = 886106B11A1919800066D811 /* button_add.png */; };
+		886106B81A1919800066D811 /* button_connect.png in Resources */ = {isa = PBXBuildFile; fileRef = 886106B21A1919800066D811 /* button_connect.png */; };
+		886106B91A1919800066D811 /* button_go.png in Resources */ = {isa = PBXBuildFile; fileRef = 886106B31A1919800066D811 /* button_go.png */; };
+		886106BA1A1919800066D811 /* button_mainmenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 886106B41A1919800066D811 /* button_mainmenu.png */; };
+		886106BB1A1919800066D811 /* button_playagain.png in Resources */ = {isa = PBXBuildFile; fileRef = 886106B51A1919800066D811 /* button_playagain.png */; };
+		886106BC1A1919800066D811 /* button_start.png in Resources */ = {isa = PBXBuildFile; fileRef = 886106B61A1919800066D811 /* button_start.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +93,14 @@
 		884501EE1A1834AB0076ECF6 /* Challenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Challenge.m; sourceTree = "<group>"; };
 		886106AA1A1910E50066D811 /* jail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jail.png; sourceTree = "<group>"; };
 		886106AC1A1914D50066D811 /* boast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boast.png; sourceTree = "<group>"; };
+		886106AE1A1916E30066D811 /* GameOverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverViewController.h; sourceTree = "<group>"; };
+		886106AF1A1916E30066D811 /* GameOverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverViewController.m; sourceTree = "<group>"; };
+		886106B11A1919800066D811 /* button_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_add.png; sourceTree = "<group>"; };
+		886106B21A1919800066D811 /* button_connect.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_connect.png; sourceTree = "<group>"; };
+		886106B31A1919800066D811 /* button_go.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_go.png; sourceTree = "<group>"; };
+		886106B41A1919800066D811 /* button_mainmenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_mainmenu.png; sourceTree = "<group>"; };
+		886106B51A1919800066D811 /* button_playagain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_playagain.png; sourceTree = "<group>"; };
+		886106B61A1919800066D811 /* button_start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_start.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +154,12 @@
 		8845019B1A17E09B0076ECF6 /* Boast */ = {
 			isa = PBXGroup;
 			children = (
+				886106B11A1919800066D811 /* button_add.png */,
+				886106B21A1919800066D811 /* button_connect.png */,
+				886106B31A1919800066D811 /* button_go.png */,
+				886106B41A1919800066D811 /* button_mainmenu.png */,
+				886106B51A1919800066D811 /* button_playagain.png */,
+				886106B61A1919800066D811 /* button_start.png */,
 				886106AC1A1914D50066D811 /* boast.png */,
 				886106AA1A1910E50066D811 /* jail.png */,
 				884501EB1A1834620076ECF6 /* challenges.json */,
@@ -207,6 +228,8 @@
 				884501E61A1824EE0076ECF6 /* ScoringViewController.m */,
 				884501E81A182AE80076ECF6 /* NextRoundViewController.h */,
 				884501E91A182AE80076ECF6 /* NextRoundViewController.m */,
+				886106AE1A1916E30066D811 /* GameOverViewController.h */,
+				886106AF1A1916E30066D811 /* GameOverViewController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -294,12 +317,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				886106B81A1919800066D811 /* button_connect.png in Resources */,
+				886106B91A1919800066D811 /* button_go.png in Resources */,
 				884501A81A17E09B0076ECF6 /* Main.storyboard in Resources */,
+				886106BA1A1919800066D811 /* button_mainmenu.png in Resources */,
+				886106BC1A1919800066D811 /* button_start.png in Resources */,
 				884501EC1A1834620076ECF6 /* challenges.json in Resources */,
 				884501D81A17FD680076ECF6 /* avatar.jpg in Resources */,
 				884501AD1A17E09B0076ECF6 /* LaunchScreen.xib in Resources */,
 				884501C91A17E5330076ECF6 /* Podfile in Resources */,
+				886106BB1A1919800066D811 /* button_playagain.png in Resources */,
 				886106AD1A1914D50066D811 /* boast.png in Resources */,
+				886106B71A1919800066D811 /* button_add.png in Resources */,
 				886106AB1A1910E50066D811 /* jail.png in Resources */,
 				884501AA1A17E09B0076ECF6 /* Images.xcassets in Resources */,
 			);
@@ -355,6 +384,7 @@
 				884501EA1A182AE80076ECF6 /* NextRoundViewController.m in Sources */,
 				884501A21A17E09B0076ECF6 /* AppDelegate.m in Sources */,
 				884501D21A17F1410076ECF6 /* AddPlayerViewController.m in Sources */,
+				886106B01A1916E30066D811 /* GameOverViewController.m in Sources */,
 				884501DB1A17FDE40076ECF6 /* PlayerCollectionViewCell.m in Sources */,
 				884501CC1A17EE4B0076ECF6 /* GameData.m in Sources */,
 				884501DE1A18005F0076ECF6 /* ChromeCastManager.m in Sources */,

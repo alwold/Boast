@@ -37,4 +37,8 @@
 
 - (void)resetRound;
 
+- (void)reset;
+
+- (void)resetGame;
+
 @end

@@ -79,4 +79,21 @@
     self.currentBid = 0;
 }
 
+- (void)resetGame
+{
+    [self resetRound];
+    for (Player *player in self.players) {
+        player.score = 0;
+        player.skipRound = NO;
+    }
+}
+
+- (void)reset
+{
+    [self resetGame];
+    [self.players removeAllObjects];
+    self.device = nil;
+    self.nextColor = 1;
+}
+
 @end
