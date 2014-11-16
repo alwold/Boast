@@ -142,7 +142,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlH-cQ-tO6">
-                                <rect key="frame" x="236.5" y="396" width="128" height="54"/>
+                                <rect key="frame" x="236.5" y="223" width="128" height="54"/>
                                 <state key="normal" image="button_start.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -154,8 +154,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="centerY" secondItem="DlH-cQ-tO6" secondAttribute="centerY" constant="50" id="9MZ-BC-FQ9"/>
                             <constraint firstItem="sgy-4e-hLv" firstAttribute="top" secondItem="g9g-Q5-dGu" secondAttribute="top" id="AFS-rl-0hc"/>
-                            <constraint firstItem="dhH-ml-UeE" firstAttribute="top" secondItem="DlH-cQ-tO6" secondAttribute="bottom" constant="150" id="OZZ-Yj-Wgr"/>
                             <constraint firstItem="sgy-4e-hLv" firstAttribute="leading" secondItem="qdh-0b-34S" secondAttribute="leading" constant="53" id="PUI-gd-Kef"/>
                             <constraint firstItem="g9g-Q5-dGu" firstAttribute="top" secondItem="1Kq-EM-tsx" secondAttribute="bottom" constant="45" id="TOf-P5-DQM"/>
                             <constraint firstItem="hz7-BH-lG8" firstAttribute="leading" secondItem="qdh-0b-34S" secondAttribute="leadingMargin" id="d5q-HL-dPH"/>

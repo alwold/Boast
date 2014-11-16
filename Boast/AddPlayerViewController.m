@@ -62,7 +62,7 @@
     NSLog(@"sending message");
     [mgr.channel sendTextMessage:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
     
-    [[[UIAlertView alloc] initWithTitle:@"Added" message:@"Added" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+//    [[[UIAlertView alloc] initWithTitle:@"Added" message:@"Added" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
     
     self.nameTextField.text = @"";
     [self setNextColor];
