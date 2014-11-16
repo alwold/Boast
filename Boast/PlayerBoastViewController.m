@@ -74,4 +74,18 @@
     [collectionView deselectItemAtIndexPath:indexPath animated:NO];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    ChromeCastManager *mgr = [ChromeCastManager shared];
+    NSDictionary *jsonData = @{@"command": @"nav", @"screen": @"answer"};
+    NSError *error;
+    NSData *data = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:&error];
+    if (error) {
+        NSLog(@"error: %@", error);
+    }
+    NSLog(@"sending to screen answer");
+    [mgr.channel sendTextMessage:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
+    
+}
+
 @end

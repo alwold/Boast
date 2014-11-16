@@ -8,6 +8,7 @@
 
 #import "ScoringViewController.h"
 #import "GameData.h"
+#import "ChromeCastManager.h"
 
 @interface ScoringViewController ()
 
@@ -59,8 +60,10 @@
     }
     if (self.score >= gameData.currentBid) {
         gameData.highBidder.score++;
+        [self sendToScreen:@"question_success"];
     } else {
         gameData.highBidder.skipRound = YES;
+        [self sendToScreen:@"question_failure"];
     }
     NSLog(@"score: %d", gameData.highBidder.score);
     NSLog(@"win points: %d", gameData.winPoints);
@@ -69,6 +72,20 @@
     } else {
         [self performSegueWithIdentifier:@"endTurn" sender:self];
     }
+}
+
+- (void)sendToScreen:(NSString *)screen
+{
+    ChromeCastManager *mgr = [ChromeCastManager shared];
+    NSDictionary *jsonData = @{@"command": @"nav", @"screen": screen};
+    NSError *error;
+    NSData *data = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:&error];
+    if (error) {
+        NSLog(@"error: %@", error);
+    }
+    NSLog(@"sending to screen %@", screen);
+    [mgr.channel sendTextMessage:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
+
 }
 
 @end
