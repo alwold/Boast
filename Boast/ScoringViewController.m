@@ -24,6 +24,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.score = 0;
+    GameData *gameData = [GameData sharedGameData];
+    self.nameLabel.text = gameData.highBidder.name;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,7 +39,7 @@
 }
 
 - (IBAction)oopsPressed:(id)sender {
-    self.score++;
+    self.score--;
     [self updateProgressBar];
 }
 
