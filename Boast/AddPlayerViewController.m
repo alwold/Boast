@@ -10,6 +10,7 @@
 #import "GameData.h"
 #import "Player.h"
 #import "ChromeCastManager.h"
+#import "Challenge.h"
 
 @interface AddPlayerViewController ()
 
@@ -74,6 +75,32 @@
 }
 
 - (IBAction)startButtonPressed:(id)sender {
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    ChromeCastManager *mgr = [ChromeCastManager shared];
+    GameData *gameData = [GameData sharedGameData];
+    Challenge *challenge = gameData.challenges[arc4random_uniform([gameData.challenges count])];
+    NSLog(@"sending challenge: %@", challenge.text);
+    NSDictionary *jsonData = @{@"command": @"set.question", @"text": challenge.text};
+    NSError *error;
+    NSData *data = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:&error];
+    if (error) {
+        NSLog(@"error: %@", error);
+    }
+    NSLog(@"sending to screen pick_category");
+    [mgr.channel sendTextMessage:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
+    
+    jsonData = @{@"command": @"nav", @"screen": @"pick_category"};
+    
+    data = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:&error];
+    if (error) {
+        NSLog(@"error: %@", error);
+    }
+    NSLog(@"sending to screen pick_category");
+    [mgr.channel sendTextMessage:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
+
 }
 
 @end
