@@ -9,6 +9,7 @@
 #import "AddPlayerViewController.h"
 #import "GameData.h"
 #import "Player.h"
+#import "ChromeCastManager.h"
 
 @interface AddPlayerViewController ()
 
@@ -50,6 +51,15 @@
     player.color = self.color;
     
     [gameData.players addObject:player];
+    ChromeCastManager *mgr = [ChromeCastManager shared];
+    NSDictionary *jsonData = @{@"command": @"add.player", @"name": player.name};
+    NSError *error;
+    NSData *data = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:&error];
+    if (error) {
+        NSLog(@"error: %@", error);
+    }
+    NSLog(@"sending message");
+    [mgr.channel sendTextMessage:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
     
     [[[UIAlertView alloc] initWithTitle:@"Added" message:@"Added" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
     
