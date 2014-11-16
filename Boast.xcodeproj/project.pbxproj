@@ -15,7 +15,6 @@
 		884501AD1A17E09B0076ECF6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 884501AB1A17E09B0076ECF6 /* LaunchScreen.xib */; };
 		884501B91A17E09B0076ECF6 /* BoastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501B81A17E09B0076ECF6 /* BoastTests.m */; };
 		884501C41A17E1B00076ECF6 /* GameSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501C31A17E1B00076ECF6 /* GameSetupViewController.m */; };
-		884501C71A17E2BD0076ECF6 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501C61A17E2BD0076ECF6 /* SplashViewController.m */; };
 		884501C91A17E5330076ECF6 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 884501C81A17E5330076ECF6 /* Podfile */; };
 		884501CC1A17EE4B0076ECF6 /* GameData.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501CB1A17EE4B0076ECF6 /* GameData.m */; };
 		884501CF1A17EF870076ECF6 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501CE1A17EF870076ECF6 /* Player.m */; };
@@ -31,6 +30,7 @@
 		884501EC1A1834620076ECF6 /* challenges.json in Resources */ = {isa = PBXBuildFile; fileRef = 884501EB1A1834620076ECF6 /* challenges.json */; };
 		884501EF1A1834AB0076ECF6 /* Challenge.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501EE1A1834AB0076ECF6 /* Challenge.m */; };
 		886106AB1A1910E50066D811 /* jail.png in Resources */ = {isa = PBXBuildFile; fileRef = 886106AA1A1910E50066D811 /* jail.png */; };
+		886106AD1A1914D50066D811 /* boast.png in Resources */ = {isa = PBXBuildFile; fileRef = 886106AC1A1914D50066D811 /* boast.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,8 +59,6 @@
 		884501B81A17E09B0076ECF6 /* BoastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BoastTests.m; sourceTree = "<group>"; };
 		884501C21A17E1B00076ECF6 /* GameSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameSetupViewController.h; sourceTree = "<group>"; };
 		884501C31A17E1B00076ECF6 /* GameSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameSetupViewController.m; sourceTree = "<group>"; };
-		884501C51A17E2BD0076ECF6 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
-		884501C61A17E2BD0076ECF6 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
 		884501C81A17E5330076ECF6 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		884501CA1A17EE4B0076ECF6 /* GameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameData.h; sourceTree = "<group>"; };
 		884501CB1A17EE4B0076ECF6 /* GameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameData.m; sourceTree = "<group>"; };
@@ -87,6 +85,7 @@
 		884501ED1A1834AB0076ECF6 /* Challenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Challenge.h; sourceTree = "<group>"; };
 		884501EE1A1834AB0076ECF6 /* Challenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Challenge.m; sourceTree = "<group>"; };
 		886106AA1A1910E50066D811 /* jail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jail.png; sourceTree = "<group>"; };
+		886106AC1A1914D50066D811 /* boast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boast.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +139,7 @@
 		8845019B1A17E09B0076ECF6 /* Boast */ = {
 			isa = PBXGroup;
 			children = (
+				886106AC1A1914D50066D811 /* boast.png */,
 				886106AA1A1910E50066D811 /* jail.png */,
 				884501EB1A1834620076ECF6 /* challenges.json */,
 				884501D71A17FD680076ECF6 /* avatar.jpg */,
@@ -197,8 +197,6 @@
 				884501D11A17F1410076ECF6 /* AddPlayerViewController.m */,
 				884501C21A17E1B00076ECF6 /* GameSetupViewController.h */,
 				884501C31A17E1B00076ECF6 /* GameSetupViewController.m */,
-				884501C51A17E2BD0076ECF6 /* SplashViewController.h */,
-				884501C61A17E2BD0076ECF6 /* SplashViewController.m */,
 				884501D41A17F9480076ECF6 /* PlayerBoastViewController.h */,
 				884501D51A17F9480076ECF6 /* PlayerBoastViewController.m */,
 				884501D91A17FDE40076ECF6 /* PlayerCollectionViewCell.h */,
@@ -301,6 +299,7 @@
 				884501D81A17FD680076ECF6 /* avatar.jpg in Resources */,
 				884501AD1A17E09B0076ECF6 /* LaunchScreen.xib in Resources */,
 				884501C91A17E5330076ECF6 /* Podfile in Resources */,
+				886106AD1A1914D50066D811 /* boast.png in Resources */,
 				886106AB1A1910E50066D811 /* jail.png in Resources */,
 				884501AA1A17E09B0076ECF6 /* Images.xcassets in Resources */,
 			);
@@ -365,7 +364,6 @@
 				884501C41A17E1B00076ECF6 /* GameSetupViewController.m in Sources */,
 				8845019F1A17E09B0076ECF6 /* main.m in Sources */,
 				884501CF1A17EF870076ECF6 /* Player.m in Sources */,
-				884501C71A17E2BD0076ECF6 /* SplashViewController.m in Sources */,
 				884501E41A180A030076ECF6 /* TintedImageView.m in Sources */,
 				884501E11A1807D30076ECF6 /* BoastChannel.m in Sources */,
 			);
