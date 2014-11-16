@@ -27,7 +27,6 @@
     self.collectionView.dataSource = self;
     self.collectionView.delegate = self;
     self.gameData = [GameData sharedGameData];
-    [self reset];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -62,14 +61,4 @@
     [collectionView deselectItemAtIndexPath:indexPath animated:NO];
 }
 
-- (void)reset
-{
-    GameData *gameData = [GameData sharedGameData];
-    gameData.highBidder = nil;
-    gameData.currentBid = 0;
-}
-
-- (IBAction)goPressed:(id)sender {
-    
-}
 @end

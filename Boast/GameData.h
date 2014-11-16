@@ -34,4 +34,6 @@
 
 - (int)getNextColor;
 
+- (void)resetRound;
+
 @end

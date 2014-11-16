@@ -48,4 +48,10 @@
     return self.nextColor++;
 }
 
+- (void)resetRound
+{
+    self.highBidder = nil;
+    self.currentBid = 0;
+}
+
 @end

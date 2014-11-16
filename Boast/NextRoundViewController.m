@@ -7,6 +7,7 @@
 //
 
 #import "NextRoundViewController.h"
+#import "GameData.h"
 
 @interface NextRoundViewController ()
 
@@ -32,7 +33,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)goPressed:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    GameData *gameData = [GameData sharedGameData];
+    [gameData resetRound];
 }
 
 @end
