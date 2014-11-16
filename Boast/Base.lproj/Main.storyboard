@@ -116,26 +116,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Player" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hz7-BH-lG8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Player" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hz7-BH-lG8">
                                 <rect key="frame" x="16" y="20" width="84" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgy-4e-hLv">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4kG-pA-USp">
+                                <rect key="frame" x="16" y="49" width="29" height="62"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgy-4e-hLv">
                                 <rect key="frame" x="53" y="65" width="365" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="365" id="jlZ-go-iRC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9g-Q5-dGu">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9g-Q5-dGu">
                                 <rect key="frame" x="448" y="65" width="30" height="30"/>
                                 <state key="normal" title="+"/>
                                 <connections>
                                     <action selector="addPlayerPressed:" destination="wly-UQ-UQ9" eventType="touchUpInside" id="kd3-Yd-gax"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlH-cQ-tO6">
-                                <rect key="frame" x="254" y="413" width="33" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlH-cQ-tO6">
+                                <rect key="frame" x="284" y="420" width="33" height="30"/>
                                 <state key="normal" title="Start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -144,12 +151,24 @@
                                     <segue destination="fqV-tf-QVQ" kind="show" id="A5K-SD-EiD"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4kG-pA-USp">
-                                <rect key="frame" x="16" y="70" width="20" height="20"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sgy-4e-hLv" firstAttribute="top" secondItem="g9g-Q5-dGu" secondAttribute="top" id="AFS-rl-0hc"/>
+                            <constraint firstItem="dhH-ml-UeE" firstAttribute="top" secondItem="DlH-cQ-tO6" secondAttribute="bottom" constant="150" id="OZZ-Yj-Wgr"/>
+                            <constraint firstItem="sgy-4e-hLv" firstAttribute="leading" secondItem="qdh-0b-34S" secondAttribute="leading" constant="53" id="PUI-gd-Kef"/>
+                            <constraint firstItem="g9g-Q5-dGu" firstAttribute="top" secondItem="1Kq-EM-tsx" secondAttribute="bottom" constant="45" id="TOf-P5-DQM"/>
+                            <constraint firstItem="hz7-BH-lG8" firstAttribute="leading" secondItem="qdh-0b-34S" secondAttribute="leadingMargin" id="d5q-HL-dPH"/>
+                            <constraint firstItem="sgy-4e-hLv" firstAttribute="centerY" secondItem="4kG-pA-USp" secondAttribute="centerY" id="f9L-7q-0fp"/>
+                            <constraint firstItem="4kG-pA-USp" firstAttribute="top" secondItem="hz7-BH-lG8" secondAttribute="bottom" constant="8" symbolic="YES" id="j2U-4u-mG8"/>
+                            <constraint firstItem="sgy-4e-hLv" firstAttribute="top" secondItem="hz7-BH-lG8" secondAttribute="bottom" constant="24" id="ojh-fV-2hR"/>
+                            <constraint firstItem="4kG-pA-USp" firstAttribute="leading" secondItem="hz7-BH-lG8" secondAttribute="leading" id="rgX-qf-AEP"/>
+                            <constraint firstItem="sgy-4e-hLv" firstAttribute="leading" secondItem="4kG-pA-USp" secondAttribute="trailing" constant="8" symbolic="YES" id="uH5-9F-QZC"/>
+                            <constraint firstItem="g9g-Q5-dGu" firstAttribute="centerY" secondItem="sgy-4e-hLv" secondAttribute="centerY" id="uNR-wm-r7u"/>
+                            <constraint firstItem="g9g-Q5-dGu" firstAttribute="leading" secondItem="sgy-4e-hLv" secondAttribute="trailing" constant="30" id="wi8-IB-VXZ"/>
+                            <constraint firstItem="hz7-BH-lG8" firstAttribute="top" secondItem="1Kq-EM-tsx" secondAttribute="bottom" id="wym-6x-pkV"/>
+                            <constraint firstAttribute="centerX" secondItem="DlH-cQ-tO6" secondAttribute="centerX" id="zAb-qc-LoI"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="colorView" destination="4kG-pA-USp" id="J4Z-8t-bsP"/>
@@ -397,6 +416,6 @@
         <image name="avatar.jpg" width="628" height="581"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="p3N-aw-se8"/>
+        <segue reference="A5K-SD-EiD"/>
     </inferredMetricsTieBreakers>
 </document>
