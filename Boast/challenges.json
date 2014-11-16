@@ -1,0 +1,17 @@
+{"challenges":[
+	{"text":"songs by Rihanna", "category":"Songs"},
+	{"text":"songs by Taylor Swift", "category":"Songs"},
+	{"text":"songs by Beck", "category":"Songs"},
+	{"text":"albums by Coldplay", "category":"Songs"},
+	{"text":"characters in the Simpsons", "category":"Television"},
+	{"text":"Pac-12 College Basketball teams", "category":"Sports"},
+	{"text":"movies featuring Robert Downey Jr.", "category":"Movies"},
+	{"text":"movies featuring Harrison Ford", "category":"Movies"},
+	{"text":"movies featuring Samuel L. Jackson", "category":"Movies"},
+	{"text":"cities in Colorado", "category":"Geography"},
+	{"text":"Greek gods", "category":"Mythology"},
+	{"text":"names of currency", "category":"Geography"},
+	{"text":"Marvel villains", "category":"Comics"},
+	{"text":"books written by Roald Dahl", "category":"Books"},
+	{"text":"books written by John Steinbeck", "category":"Books"}
+              ]}

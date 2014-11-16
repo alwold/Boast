@@ -27,6 +27,7 @@
 @property (nonatomic) int nextColor;
 @property (nonatomic) int currentBid;
 @property (strong, nonatomic) Player *highBidder;
+@property (strong, nonatomic) NSMutableArray *challenges;
 
 + (id)sharedGameData;
 

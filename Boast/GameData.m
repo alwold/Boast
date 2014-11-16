@@ -7,6 +7,7 @@
 //
 
 #import "GameData.h"
+#import "Challenge.h"
 
 @implementation GameData
 
@@ -37,8 +38,25 @@
 {
     self = [super init];
     if (self) {
+        NSLog(@"game data init");
         self.nextColor = 1;
         self.players = [NSMutableArray array];
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"challenges" ofType:@"json"];
+        NSData *data = [NSData dataWithContentsOfFile:filePath];
+        NSError *error;
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
+        if (error) {
+            NSLog(@"error: %@", error);
+        }
+        self.challenges = [NSMutableArray array];
+        NSArray *challenges = json[@"challenges"];
+        for (NSDictionary *challengeDict in challenges) {
+            Challenge *challenge = [[Challenge alloc] init];
+            challenge.text = challengeDict[@"text"];
+            challenge.category = challengeDict[@"category"];
+            NSLog(@"adding challenge with text %@, and category %@", challenge.text, challenge.category);
+            [self.challenges addObject:challenge];
+        }
     }
     return self;
 }
