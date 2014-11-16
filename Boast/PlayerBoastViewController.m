@@ -48,6 +48,7 @@
     UIColor *color = [GameData uiColorForColor:player.color];
     NSLog(@"setting color to %@", color);
     cell.imageView.customTintColor = color;
+    cell.backgroundColor = color;
     cell.label.text = player.name;
     if (player.skipRound) {
         cell.jailImageView.hidden = NO;
