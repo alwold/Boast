@@ -41,7 +41,6 @@
 {
     PlayerCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     NSLog(@"setting image");
-    // TODO check for disabled
     GameData *gameData = [GameData sharedGameData];
     Player *player = gameData.players[indexPath.row];
     cell.backgroundColor = [UIColor whiteColor];

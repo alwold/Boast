@@ -29,7 +29,14 @@
             return [UIColor orangeColor];
         case COLOR_YELLOW:
             return [UIColor yellowColor];
-            // TODO finish these
+        case COLOR_GREEN:
+            return [UIColor greenColor];
+        case COLOR_BLUE:
+            return [UIColor blueColor];
+        case COLOR_INDIGO:
+            return [UIColor colorWithRed:75 green:0 blue:130 alpha:1];
+        case COLOR_VIOLET:
+            return [UIColor purpleColor];
     }
     return nil;
 }
