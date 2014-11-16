@@ -27,6 +27,7 @@
 		884501E11A1807D30076ECF6 /* BoastChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501E01A1807D30076ECF6 /* BoastChannel.m */; };
 		884501E41A180A030076ECF6 /* TintedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501E31A180A030076ECF6 /* TintedImageView.m */; };
 		884501E71A1824EE0076ECF6 /* ScoringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501E61A1824EE0076ECF6 /* ScoringViewController.m */; };
+		884501EA1A182AE80076ECF6 /* NextRoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 884501E91A182AE80076ECF6 /* NextRoundViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		884501E31A180A030076ECF6 /* TintedImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TintedImageView.m; sourceTree = "<group>"; };
 		884501E51A1824EE0076ECF6 /* ScoringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoringViewController.h; sourceTree = "<group>"; };
 		884501E61A1824EE0076ECF6 /* ScoringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoringViewController.m; sourceTree = "<group>"; };
+		884501E81A182AE80076ECF6 /* NextRoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NextRoundViewController.h; sourceTree = "<group>"; };
+		884501E91A182AE80076ECF6 /* NextRoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NextRoundViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +196,8 @@
 				884501E31A180A030076ECF6 /* TintedImageView.m */,
 				884501E51A1824EE0076ECF6 /* ScoringViewController.h */,
 				884501E61A1824EE0076ECF6 /* ScoringViewController.m */,
+				884501E81A182AE80076ECF6 /* NextRoundViewController.h */,
+				884501E91A182AE80076ECF6 /* NextRoundViewController.m */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				884501EA1A182AE80076ECF6 /* NextRoundViewController.m in Sources */,
 				884501A21A17E09B0076ECF6 /* AppDelegate.m in Sources */,
 				884501D21A17F1410076ECF6 /* AddPlayerViewController.m in Sources */,
 				884501DB1A17FDE40076ECF6 /* PlayerCollectionViewCell.m in Sources */,
