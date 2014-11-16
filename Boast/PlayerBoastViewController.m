@@ -41,6 +41,7 @@
 {
     PlayerCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     NSLog(@"setting image");
+    // TODO check for disabled
     GameData *gameData = [GameData sharedGameData];
     Player *player = gameData.players[indexPath.row];
     cell.backgroundColor = [UIColor whiteColor];
@@ -54,24 +55,26 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    [collectionView deselectItemAtIndexPath:indexPath animated:NO];
     GameData *gameData = [GameData sharedGameData];
     Player *player = gameData.players[indexPath.row];
-    NSLog(@"player: %@", player);
-    gameData.highBidder = player;
-    gameData.currentBid++;
-	
-    ChromeCastManager *mgr = [ChromeCastManager shared];
-    NSDictionary *jsonData = @{@"command": @"set.bid", @"player": player.name, @"bid": [NSString stringWithFormat:@"%d", gameData.currentBid]};
-    NSError *error;
-    NSData *data = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:&error];
-    if (error) {
-        NSLog(@"error: %@", error);
-    }
-    NSLog(@"sending to screen pick_category");
-    [mgr.channel sendTextMessage:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
+    if (!player.skipRound) {
+        NSLog(@"player: %@", player);
+        gameData.highBidder = player;
+        gameData.currentBid++;
+        
+        ChromeCastManager *mgr = [ChromeCastManager shared];
+        NSDictionary *jsonData = @{@"command": @"set.bid", @"player": player.name, @"bid": [NSString stringWithFormat:@"%d", gameData.currentBid]};
+        NSError *error;
+        NSData *data = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:&error];
+        if (error) {
+            NSLog(@"error: %@", error);
+        }
+        NSLog(@"sending to screen pick_category");
+        [mgr.channel sendTextMessage:[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]];
 
-    NSLog(@"bid is now %d", gameData.currentBid);
-    [collectionView deselectItemAtIndexPath:indexPath animated:NO];
+        NSLog(@"bid is now %d", gameData.currentBid);
+    }
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
