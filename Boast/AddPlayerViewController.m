@@ -83,7 +83,7 @@
     GameData *gameData = [GameData sharedGameData];
     Challenge *challenge = gameData.challenges[arc4random_uniform([gameData.challenges count])];
     NSLog(@"sending challenge: %@", challenge.text);
-    NSDictionary *jsonData = @{@"command": @"set.question", @"text": challenge.text};
+    NSDictionary *jsonData = @{@"command": @"set.question", @"text": [NSString stringWithFormat:@"The challenge is %@", challenge.text]};
     NSError *error;
     NSData *data = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:&error];
     if (error) {
