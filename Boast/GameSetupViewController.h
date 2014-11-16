@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GoogleCast.h>
 
 @interface GameSetupViewController : UIViewController <GCKDeviceScannerListener, UITableViewDelegate, UITableViewDataSource, GCKDeviceManagerDelegate>
 

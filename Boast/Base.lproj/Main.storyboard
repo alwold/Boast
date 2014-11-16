@@ -55,9 +55,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAe-lX-BaO">
-                                <rect key="frame" x="268.5" y="444" width="63" height="156"/>
-                                <state key="normal" title="Game on">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAe-lX-BaO">
+                                <rect key="frame" x="215" y="444" width="170" height="156"/>
+                                <state key="normal" image="button_connect.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -123,27 +123,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4kG-pA-USp">
-                                <rect key="frame" x="16" y="49" width="29" height="62"/>
+                                <rect key="frame" x="16" y="49" width="29" height="82"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sgy-4e-hLv">
-                                <rect key="frame" x="53" y="65" width="365" height="30"/>
+                                <rect key="frame" x="53" y="65" width="365" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="365" id="jlZ-go-iRC"/>
+                                    <constraint firstAttribute="height" constant="50" id="obe-ZL-sLF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9g-Q5-dGu">
-                                <rect key="frame" x="448" y="65" width="30" height="30"/>
-                                <state key="normal" title="+"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9g-Q5-dGu">
+                                <rect key="frame" x="448" y="65" width="22" height="50"/>
                                 <connections>
                                     <action selector="addPlayerPressed:" destination="wly-UQ-UQ9" eventType="touchUpInside" id="kd3-Yd-gax"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlH-cQ-tO6">
-                                <rect key="frame" x="284" y="420" width="33" height="30"/>
-                                <state key="normal" title="Start">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DlH-cQ-tO6">
+                                <rect key="frame" x="236.5" y="396" width="128" height="54"/>
+                                <state key="normal" image="button_start.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -237,9 +237,9 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="894-dW-hOh">
-                                <rect key="frame" x="496" y="562" width="104" height="30"/>
-                                <state key="normal" title="Go!">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="894-dW-hOh">
+                                <rect key="frame" x="471" y="526" width="113" height="54"/>
+                                <state key="normal" image="button_go.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -430,9 +430,12 @@
     </scenes>
     <resources>
         <image name="avatar.jpg" width="628" height="581"/>
+        <image name="button_connect.png" width="170" height="54"/>
+        <image name="button_go.png" width="84" height="54"/>
+        <image name="button_start.png" width="128" height="54"/>
         <image name="jail.png" width="600" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eKg-TG-nKO"/>
+        <segue reference="A5K-SD-EiD"/>
     </inferredMetricsTieBreakers>
 </document>
