@@ -13,6 +13,7 @@
 
 @property (weak, nonatomic) IBOutlet TintedImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UIImageView *jailImageView;
 
 - (void)setColor:(UIColor *)color;
 

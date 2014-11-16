@@ -50,6 +50,11 @@
     NSLog(@"setting color to %@", color);
     cell.imageView.customTintColor = color;
     cell.label.text = player.name;
+    if (player.skipRound) {
+        cell.jailImageView.hidden = NO;
+    } else {
+        cell.jailImageView.hidden = YES;
+    }
     return cell;
 }
 
