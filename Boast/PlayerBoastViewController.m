@@ -47,7 +47,32 @@
     cell.imageView.image = [UIImage imageNamed:@"avatar.jpg"];
     UIColor *color = [GameData uiColorForColor:player.color];
     NSLog(@"setting color to %@", color);
-    cell.imageView.customTintColor = color;
+    switch (player.color) {
+        case 1:
+            cell.imageView.image = [UIImage imageNamed:@"avatar1.png"];
+            break;
+        case 2:
+            cell.imageView.image = [UIImage imageNamed:@"avatar2.png"];
+            break;
+        case 3:
+            cell.imageView.image = [UIImage imageNamed:@"avatar3.png"];
+            break;
+        case 4:
+            cell.imageView.image = [UIImage imageNamed:@"avatar4.png"];
+            break;
+        case 5:
+            cell.imageView.image = [UIImage imageNamed:@"avatar5.png"];
+            break;
+        case 6:
+            cell.imageView.image = [UIImage imageNamed:@"avatar6.png"];
+            break;
+        case 7:
+            cell.imageView.image = [UIImage imageNamed:@"avatar7.png"];
+            break;
+        case 8:
+            cell.imageView.image = [UIImage imageNamed:@"avatar8.png"];
+            break;
+    }
     cell.backgroundColor = color;
     cell.label.text = player.name;
     if (player.skipRound) {
