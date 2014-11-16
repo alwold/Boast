@@ -27,7 +27,7 @@
     GameData *gameData = [GameData sharedGameData];
     self.nameLabel.text = gameData.highBidder.name;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 30*NSEC_PER_SEC), dispatch_get_main_queue(), ^{
-        [self performSegueWithIdentifier:@"endTurn" sender:self];
+        [self endTurn];
     });
 }
 
@@ -50,6 +50,25 @@
     NSLog(@"updateProgressBar: %d", self.score);
     GameData *gameData = [GameData sharedGameData];
     [self.progressView setProgress:(float) self.score / (float) gameData.currentBid animated:YES];
+}
+
+- (void)endTurn {
+    GameData *gameData = [GameData sharedGameData];
+    for (Player *player in gameData.players) {
+        player.skipRound = NO;
+    }
+    if (self.score >= gameData.currentBid) {
+        gameData.highBidder.score++;
+    } else {
+        gameData.highBidder.skipRound = YES;
+    }
+    NSLog(@"score: %d", gameData.highBidder.score);
+    NSLog(@"win points: %d", gameData.winPoints);
+    if (gameData.highBidder.score >= gameData.winPoints) {
+        [self performSegueWithIdentifier:@"endGame" sender:self];
+    } else {
+        [self performSegueWithIdentifier:@"endTurn" sender:self];
+    }
 }
 
 @end

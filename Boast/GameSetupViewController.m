@@ -93,6 +93,7 @@
     self.activityIndicatorView.hidden = NO;
     
     GameData *gameData = [GameData sharedGameData];
+    gameData.winPoints = (int) self.stepper.value;
     ChromeCastManager *manager = [ChromeCastManager shared];
     manager.deviceManager = [[GCKDeviceManager alloc] initWithDevice:gameData.device
                                                    clientPackageName:[[NSBundle mainBundle].infoDictionary objectForKey:@"CFBundleIdentifier"]];
