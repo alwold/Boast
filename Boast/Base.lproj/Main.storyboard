@@ -93,7 +93,7 @@
                                     <action selector="gameOnPressed:" destination="QmY-rh-XHZ" eventType="touchUpInside" id="8dW-WJ-n3g"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="7qT-IE-AUI">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="7qT-IE-AUI">
                                 <rect key="frame" x="530" y="495" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
@@ -318,11 +318,47 @@
                         <outlet property="nameLabel" destination="cst-4c-xb0" id="e9T-U5-d0G"/>
                         <outlet property="progressView" destination="gLo-fk-IhP" id="D9Z-B4-UGe"/>
                         <outlet property="timeLeftLabel" destination="BmY-Et-7IV" id="dgu-YB-IYq"/>
+                        <segue destination="zpP-jI-UIP" kind="show" identifier="endTurn" id="dX9-Tu-Ulc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CBc-Cb-zYf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3213" y="405"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="03u-5l-7bp">
+            <objects>
+                <viewController id="zpP-jI-UIP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pe8-1F-oFB"/>
+                        <viewControllerLayoutGuide type="bottom" id="9jZ-Ug-2lZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OW4-KC-kYM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ready for next round?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xjb-uC-M8L">
+                                <rect key="frame" x="215" y="215" width="171" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4r-cj-ZoS">
+                                <rect key="frame" x="277" y="285" width="30" height="30"/>
+                                <state key="normal" title="Go!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Xkb-QP-TVS">
+                                <rect key="frame" x="282" y="257" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K24-1g-lhK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3851" y="405"/>
         </scene>
     </scenes>
     <resources>

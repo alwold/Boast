@@ -26,6 +26,9 @@
     self.score = 0;
     GameData *gameData = [GameData sharedGameData];
     self.nameLabel.text = gameData.highBidder.name;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 30*NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [self performSegueWithIdentifier:@"endTurn" sender:self];
+    });
 }
 
 - (void)didReceiveMemoryWarning {
