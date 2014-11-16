@@ -11,6 +11,7 @@
 #import "PlayerCollectionViewCell.h"
 #import "Player.h"
 #import "ChromeCastManager.h"
+#import <UIColor+Expanded.h>
 
 
 @interface PlayerBoastViewController ()
@@ -94,7 +95,8 @@
         gameData.currentBid++;
         
         ChromeCastManager *mgr = [ChromeCastManager shared];
-        NSDictionary *jsonData = @{@"command": @"set.bid", @"player": player.name, @"bid": [NSString stringWithFormat:@"%d", gameData.currentBid]};
+        UIColor *color = [GameData uiColorForColor:player.color];
+        NSDictionary *jsonData = @{@"command": @"set.bid", @"player": player.name, @"bid": [NSString stringWithFormat:@"%d", gameData.currentBid], @"avatar": @(player.color), @"color": [color hexStringFromColor]};
         NSError *error;
         NSData *data = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:&error];
         if (error) {

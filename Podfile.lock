@@ -1,10 +1,13 @@
 PODS:
   - google-cast-sdk (2.4.0)
+  - UIColor-Utilities (1.0.1)
 
 DEPENDENCIES:
   - google-cast-sdk
+  - UIColor-Utilities
 
 SPEC CHECKSUMS:
   google-cast-sdk: 7478a38ca2c89a4c974690758982cef5be6beaaa
+  UIColor-Utilities: 3f13aebe447f5e19c8d3aa18c194c53116b23537
 
 COCOAPODS: 0.33.1

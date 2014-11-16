@@ -11,6 +11,7 @@
 #import "Player.h"
 #import "ChromeCastManager.h"
 #import "Challenge.h"
+#import <UIColor+Expanded.h>
 
 @interface AddPlayerViewController ()
 
@@ -53,7 +54,8 @@
     
     [gameData.players addObject:player];
     ChromeCastManager *mgr = [ChromeCastManager shared];
-    NSDictionary *jsonData = @{@"command": @"add.player", @"name": player.name};
+    UIColor *color = [GameData uiColorForColor:self.color];
+    NSDictionary *jsonData = @{@"command": @"add.player", @"name": player.name, @"avatar": @(player.color), @"color": [color hexStringFromColor]};
     NSError *error;
     NSData *data = [NSJSONSerialization dataWithJSONObject:jsonData options:0 error:&error];
     if (error) {
