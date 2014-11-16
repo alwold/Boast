@@ -68,4 +68,8 @@
     gameData.highBidder = nil;
     gameData.currentBid = 0;
 }
+
+- (IBAction)goPressed:(id)sender {
+    
+}
 @end
