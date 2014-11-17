@@ -320,21 +320,13 @@
                                 <rect key="frame" x="327" y="348" width="150" height="2"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTL-Ve-rJ5">
-                                <rect key="frame" x="327" y="229" width="58" height="30"/>
+                                <rect key="frame" x="284" y="188" width="101" height="98"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Got One">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="gotOnePressed:" destination="vL1-Ck-0CE" eventType="touchUpInside" id="Kee-vB-dCL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CQ-Un-0JF">
-                                <rect key="frame" x="443" y="229" width="127" height="30"/>
-                                <state key="normal" title="Oops..remove one">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="oopsPressed:" destination="vL1-Ck-0CE" eventType="touchUpInside" id="Zu9-23-KJ0"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time left:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6NK-Rq-IwB">
@@ -355,6 +347,16 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CQ-Un-0JF">
+                                <rect key="frame" x="443" y="195" width="127" height="91"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Oops..remove one">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="oopsPressed:" destination="vL1-Ck-0CE" eventType="touchUpInside" id="Zu9-23-KJ0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -436,10 +438,10 @@
             </objects>
             <point key="canvasLocation" x="3929" y="24"/>
         </scene>
-        <!--View Controller-->
+        <!--Game Over View Controller-->
         <scene sceneID="Tcd-OA-C1E">
             <objects>
-                <viewController id="zUC-8L-iWl" sceneMemberID="viewController">
+                <viewController id="zUC-8L-iWl" customClass="GameOverViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dTO-A6-ja1"/>
                         <viewControllerLayoutGuide type="bottom" id="MBB-N0-ZLE"/>
@@ -491,6 +493,6 @@
         <image name="jail.png" width="600" height="600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="p3N-aw-se8"/>
+        <segue reference="eKg-TG-nKO"/>
     </inferredMetricsTieBreakers>
 </document>

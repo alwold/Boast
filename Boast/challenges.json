@@ -1,4 +1,6 @@
 {"challenges":[
+               {"text":"Batman movies", "category":"Movies"},
+               {"text":"names of currency", "category":"Geography"},
 	{"text":"songs by Rihanna", "category":"Songs"},
 	{"text":"songs by Taylor Swift", "category":"Songs"},
 	{"text":"songs by Beck", "category":"Songs"},
@@ -10,7 +12,6 @@
 	{"text":"movies featuring Samuel L. Jackson", "category":"Movies"},
 	{"text":"cities in Colorado", "category":"Geography"},
 	{"text":"Greek gods", "category":"Mythology"},
-	{"text":"names of currency", "category":"Geography"},
 	{"text":"Marvel villains", "category":"Comics"},
 	{"text":"books written by Roald Dahl", "category":"Books"},
 	{"text":"books written by John Steinbeck", "category":"Books"}
